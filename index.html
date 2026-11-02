@@ -4,17 +4,61 @@
   <meta charset="utf-8">
   <script data-site-https>
     (() => {
-      location.replace(`https://mod-it.games/games/${location.search}${location.hash}`);
+      const { hostname, protocol, pathname, search, hash } = location;
+      if (['mod-it.games', 'www.mod-it.games', 'gbyrka.github.io'].includes(hostname) && (protocol !== 'https:' || hostname !== 'mod-it.games')) {
+        location.replace(`https://mod-it.games${pathname}${search}${hash}`);
+      }
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-adsense-account" content="ca-pub-3806610967714181">
-  <noscript><meta http-equiv="refresh" content="0; url=https://mod-it.games/games/"></noscript>
-  <link rel="canonical" href="https://mod-it.games/games/">
+  <meta name="description" content="Original browser games by Grzegorz Byrka. Play with friends or try a solo challenge. Free to play, with no account or downloads.">
+  <meta name="theme-color" content="#142923">
+  <link rel="canonical" href="https://mod-it.games/">
+  <link rel="icon" href="/games/assets/favicon.svg">
   <title>MoD-IT Games</title>
+  <style>
+    :root{color-scheme:dark;font-family:system-ui,sans-serif;background:#142923;color:#f5f0df}*{box-sizing:border-box}body{margin:0}a{color:inherit;text-underline-offset:4px}a:focus-visible{outline:3px solid #e9bd72;outline-offset:5px}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 0;border-bottom:1px solid #ffffff30}header img{width:100px;height:auto;filter:invert(1);mix-blend-mode:screen}nav{display:flex;gap:12px;flex-wrap:wrap}nav a{display:inline-flex;align-items:center;min-height:44px;padding:8px}main{padding:50px 0}h1{font:400 clamp(34px,6vw,64px)/1.1 Georgia,serif;letter-spacing:-.03em;max-width:800px;margin:0 0 24px}h2{font:400 30px Georgia,serif;margin:45px 0 18px}p{line-height:1.7;color:#b0c2b5;max-width:780px}.eyebrow{font-size:11px;letter-spacing:.15em;color:#e9bd72}.primary{display:inline-flex;min-height:48px;align-items:center;padding:12px 20px;margin:12px 0;background:#c5e5bb;color:#20392b;border-radius:8px;font-weight:650;text-decoration:none}.games{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style:none;padding:0}.games a{display:block;min-height:160px;border:1px solid #ffffff25;border-radius:12px;padding:20px;text-decoration:none;background:#ffffff04}.games a:hover{border-color:#c5e5bb}.games strong{display:block;font-size:19px;margin-bottom:12px}.games span{display:block;color:#b0c2b5;font-size:14px;line-height:1.6}.note{font-size:13px}footer{padding:24px 0 40px;border-top:1px solid #ffffff30}footer a{display:inline-flex;align-items:center;min-height:44px}.skip:not(:focus){position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}@media(max-width:750px){.games{grid-template-columns:repeat(2,minmax(0,1fr))}header{flex-wrap:wrap}}@media(max-width:480px){.games{grid-template-columns:1fr}main{padding:30px 0}}
+  </style>
 </head>
 <body>
-  <p>Redirecting to MoD-IT Games…</p>
-  <p><a href="https://mod-it.games/games/">Browse all games</a></p>
+  <a class="skip" href="#main">Skip to games</a>
+  <header class="wrap">
+    <a href="/" aria-label="MoD-IT Games home"><img src="/games/assets/mod-it.jpg" alt="MoD-IT" width="600" height="323"></a>
+    <nav aria-label="Site navigation"><a href="/games/">All games</a><a href="/multiplayer/">Multiplayer</a><a href="#about">About</a><a href="/games/privacy.html">Privacy</a></nav>
+  </header>
+  <main id="main" class="wrap">
+    <p class="eyebrow">FREE BROWSER GAMES · MoD-IT</p>
+    <h1>Good games.<br>Good company.</h1>
+    <p>Play a round with friends or take on a solo challenge. MoD-IT is a collection of browser games made by Grzegorz Byrka: familiar board games, a card game of predictions, and original driving and exploration games. No account, subscription or download is needed.</p>
+    <a class="primary" href="/games/">Browse all games →</a>
+    <section aria-labelledby="friends-title">
+      <h2 id="friends-title">Play with friends</h2>
+      <p>Create a room, share its invitation and wait for your friends to join. Keep the host's tab open throughout the game. Multiplayer needs JavaScript and a browser that supports WebRTC; there is no public matchmaking or registration.</p>
+      <ul class="games">
+        <li><a href="/multiplayer/games/chess/"><strong>CHESS</strong><span>Classic chess for two, with legal move hints and an optional clock. Mouse and touch.</span></a></li>
+        <li><a href="/multiplayer/games/checkers/"><strong>CHECKERS</strong><span>Two-player checkers with compulsory captures and flying kings. Mouse and touch.</span></a></li>
+        <li><a href="/multiplayer/games/catana/"><strong>Catana Codex</strong><span>Build settlements, trade resources and develop an island with 2–4 players. Mouse and touch.</span></a></li>
+        <li><a href="/multiplayer/?game=plan"><strong>PLAN</strong><span>Predict how many tricks you will take in a card game for 2–6 players. Mouse and touch.</span></a></li>
+        <li><a href="/multiplayer/games/tow/"><strong>TOW</strong><span>Race friends with a trailer and navigate a winding road. 2–4 drivers; keyboard required.</span></a></li>
+        <li><a href="/multiplayer/games/hamster/"><strong>HAMSTER multiplayer</strong><span>Explore a shared habitat and collect treats in a three-minute competition. Keyboard and touch.</span></a></li>
+      </ul>
+    </section>
+    <section aria-labelledby="solo-title">
+      <h2 id="solo-title">A challenge of your own</h2>
+      <p>These solo games use keyboard controls. Each game includes its instructions and starts when you choose to play.</p>
+      <ul class="games">
+        <li><a href="/dock/"><strong>DOCK</strong><span>Guide a container ship into its berth. Manage the engine and rudder, or call on a tugboat.</span></a></li>
+        <li><a href="/park/"><strong>PARK</strong><span>Park carefully against the clock, then try the added challenge of maneuvering a trailer.</span></a></li>
+        <li><a href="/hamster/"><strong>HAMSTER</strong><span>Explore a three-level hamster habitat, find treats and run in the wheel.</span></a></li>
+      </ul>
+    </section>
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About MoD-IT Games</h2>
+      <p>This is an independent collection by Grzegorz Byrka. Games run in your browser. Solo progress and preferences can be stored on your device; multiplayer rooms use browser-to-browser connections. The <a href="/games/privacy.html">privacy policy</a> explains hosting, local storage, multiplayer connections, analytics and advertising.</p>
+      <p class="note">The game pages describe which controls are supported. Keyboard-only games are clearly marked; choose a mouse-and-touch game when playing on a phone or tablet.</p>
+    </section>
+  </main>
+  <footer class="wrap"><p>Created by <a href="https://www.linkedin.com/in/grzegorz-byrka-81175515/" target="_blank" rel="noopener noreferrer">Grzegorz Byrka ↗</a> · <a href="/games/">All games</a> · <a href="/games/privacy.html">Privacy policy</a></p></footer>
 </body>
 </html>
