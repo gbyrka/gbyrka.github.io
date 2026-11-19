@@ -2,7 +2,7 @@
 
 Publish this repository's root on GitHub Pages. `index.html` is a static homepage with game descriptions, ordinary links to the public games/catalog/privacy pages, and the AdSense account verification metatag. It works without JavaScript and does not load advertisements or analytics.
 
-The homepage links to all eight multiplayer games, including TOW: Driver’s Seat and Boggle, and all four solo games, including SOKOBAN. It describes keyboard and touch support explicitly.
+The homepage links to all eight multiplayer games, including TOW: Driver’s Seat and Boggle, and all five solo games. SimCity is the first solo entry, links to `/games/simcity2000/`, and explicitly requires a mouse and keyboard. SOKOBAN also supports touch. It describes keyboard and touch support explicitly.
 
 The public entry is `https://mod-it.games/`; the full catalog remains at `https://mod-it.games/games/`. Keep `CNAME` with `mod-it.games` in this user-site repository and enable **Enforce HTTPS** in its Pages settings. The project repositories inherit this domain and keep their existing paths (`/dock/`, `/park/`, `/hamster/`, `/sokoban/`, `/multiplayer/`). Do not add the same `CNAME` to each project repository.
 
