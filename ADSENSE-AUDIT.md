@@ -105,3 +105,11 @@ Google's guidance recommends at least 150px from game play; it is not a guarante
 that an otherwise misleading implementation is acceptable. The separate
 180px regions and removal of the modal placements address the actual layouts
 found here without inventing new ad APIs or changing consent requirements.
+
+## Catalog consolidation — 2026-11-19
+
+The illustrated catalog and its existing separated advertisement now live at
+`/`. `/games/` is a script/noscript redirect with no ads or analytics. All game
+return links point to `/` directly. Asset URLs and `/games/privacy.html` remain
+unchanged. The earlier coverage table describes the original audit snapshot;
+this consolidation supersedes its root/catalog entries.
