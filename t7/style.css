@@ -218,15 +218,6 @@ h2 {
   text-decoration: none;
 }
 
-.gallery li {
-  scroll-margin-top: 1rem;
-}
-
-.gallery li:target a {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-}
-
 .gallery a:hover,
 .contact a,
 .photo-link {
@@ -299,6 +290,56 @@ h2 {
   font-weight: 600;
 }
 
+.model-specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-block: 1.15rem 0.75rem;
+}
+
+.model-specs table {
+  align-self: start;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0 0 0.75rem 0.75rem;
+  border-spacing: 0;
+  text-align: left;
+}
+
+.model-specs caption {
+  padding: 0.7rem 0.85rem;
+  background: #232529;
+  color: #fff;
+  border-radius: 0.75rem 0.75rem 0 0;
+  font-weight: 700;
+  text-align: left;
+}
+
+.model-specs th,
+.model-specs td {
+  padding: 0.55rem 0.75rem;
+  vertical-align: top;
+}
+
+.model-specs th {
+  width: 44%;
+  font-weight: 650;
+}
+
+.model-specs tr + tr > * {
+  border-top: 1px solid var(--border);
+}
+
+.model-source {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.model-source a {
+  color: var(--accent);
+}
+
 .contact-details {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), max-content));
   column-gap: clamp(1.5rem, 5vw, 4rem);
@@ -317,7 +358,8 @@ h2 {
 }
 
 @media (max-width: 48rem) {
-  .hero {
+  .hero,
+  .model-specs {
     grid-template-columns: 1fr;
   }
 
