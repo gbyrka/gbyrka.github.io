@@ -21,7 +21,7 @@ loader fetches `/games/config.json` without cache to pick the current CSS releas
 The existing catalog ad placement and consent behavior now run on the homepage.
 The old `/games/` redirect loads no advertising or analytics; the privacy policy
 stays at `/games/privacy.html` and also loads no such scripts. Keep Auto ads off
-and retain the existing Google CMP / Consent Mode account settings.
+and see the shared games README for CMP and Analytics settings.
 
 ## Hosting and navigation
 
